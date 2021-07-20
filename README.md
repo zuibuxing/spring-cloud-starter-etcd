@@ -5,14 +5,16 @@
 
 1、在gateway服务的pom文件中引入这个jar包
 
+```
 <dependency>
    <groupId>com.zuibuxing</groupId>
    <artifactId>spring-cloud-starter-etcd</artifactId>
    <version>0.0.1-SNAPSHOT</version>
 </dependency>
+```
 
 2、在application-test.yml或者properties中添加 etcd的配置，这里给出yml的配置方式，剩下的同理了
-
+``` 
 etcd:
   # 需要监听的服务列表，可以改造成拉取未配置的服务名后，自动添加到需要监听的map中
   listen:
@@ -30,3 +32,4 @@ etcd:
   # etcd的地址
   node:
     list: http://172.16.1.125:2379
+```
